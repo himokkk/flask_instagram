@@ -8,7 +8,7 @@ import copy
 import re
 import os
 from email_validator import validate_email, EmailNotValidError
-xd
+
 app = Flask(__name__)
 
 db = declarative_base()
