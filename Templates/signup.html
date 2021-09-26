@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <title>Instagram</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/login.css">
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script  src="http://127.0.0.1:5000/static/jquery-3.6.0.js"></script>
+    <script  src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="static/main.js"></script>
+</head>
+<body>
+    <div id="content" class="noselect">
+        <div id="lang" style="visibility: hidden; position:absolute;">{{lang['lang']}}</div>
+        <div id="box">
+            <div id="div_logo">
+                <div id="logo">
+                    Instagram
+                </div>
+            </div>
+            <div id="message">{{message}}</div>
+            <form method="POST" action="/signup" id="signup_form">
+                <input type="text" name="email" id='email' placeholder="Email" class="input">
+                <input type="text" name="name" id="surname" placeholder="{{lang['name']}}" class="input">
+                <input type="text" name="username" id="username" placeholder="{{lang['username']}}" class="input">
+                <input type="password" name="password" id="password" placeholder="{{lang['password']}}" class="input"><br>
+                <div class="check_data noselect" id="button">{{lang['register']}}</div>
+            </form>
+            <a id="forgot" href="/forgot">{{lang['forgot']}}</a>
+        </div>
+        <div id="box2">
+            {{lang['haveacc']}}
+            <a style="color:#0095f6;"  href="/login">{{lang['login']}}!</a>
+        </div>
+        <div id="box2">
+            <a href="language/ensignup"><img style="margin-right:15px;" width=30 height=30 src="{{url_for('static',filename = 'languages/english.png')}}"></a>
+            <a href="language/plsignup"><img width=30 height=30 src="{{url_for('static',filename = 'languages/polish.png')}}"></a>
+        </div>
+    </div>
+</body>
+</html>

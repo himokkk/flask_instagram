@@ -1,0 +1,6 @@
+.idea
+__pycache__/
+venv
+static/edited_images
+static/imges
+static/profile_images

@@ -1,0 +1,98 @@
+@font-face {font-family: "BillabongW00-Regular"; src: url("//db.onlinewebfonts.com/t/6d32b8e06f40fb7698cfb714b9e7975d.eot"); src: url("//db.onlinewebfonts.com/t/6d32b8e06f40fb7698cfb714b9e7975d.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/6d32b8e06f40fb7698cfb714b9e7975d.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/6d32b8e06f40fb7698cfb714b9e7975d.woff") format("woff"), url("//db.onlinewebfonts.com/t/6d32b8e06f40fb7698cfb714b9e7975d.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/6d32b8e06f40fb7698cfb714b9e7975d.svg#BillabongW00-Regular") format("svg"); }
+body{
+    background-color: rgba(var(--b3f,250,250,250),1);
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover{
+    color:black;
+    text-decoration: none;
+
+}
+.selectDisable {
+    img: none;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+.select {
+  -webkit-touch-callout: auto; /* iOS Safari */
+    -webkit-user-select: auto; /* Safari */
+     -khtml-user-select: auto; /* Konqueror HTML */
+       -moz-user-select: auto; /* Old versions of Firefox */
+        -ms-user-select: auto; /* Internet Explorer/Edge */
+            user-select: auto; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+#content{
+    text-align:center;
+    width:100%;
+    min-height:300px;
+}
+#box{
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+    background-color:white;
+    margin-left:auto;
+    margin-right:auto;
+    width:350px;
+    margin-top:2%;
+}
+#box2{
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+    background-color:white;
+    padding:20px;
+    margin-left:auto;
+    margin-right:auto;
+    width:350px;
+    margin-top:15px;
+}
+#div_logo{
+    margin-top:20px;
+    margin-bottom:20px;
+    text-align: center;
+}
+#logo{
+    font-family:BillabongW00-Regular;
+    font-size:60px;
+}
+.input{
+    background-color: rgba(var(--b6a,250,250,250),1);
+    border: solid 1px rgba(var(--b6a,219,219,219),1);
+    border-radius: 3px;
+    padding: 9px 0 7px 8px;
+    margin-top:8px;
+    width: 268px;
+    height: 38px;
+}
+#button{
+    background-color: rgba(var(--d69,0,149,246),1);
+    border: 1px solid transparent;
+    color:white;
+    border-radius:3px;
+    margin-top:15px;
+    width: 268px;
+    height: 38px;
+}
+#forgot{
+    margin-top:15px;
+    font-size:13px;
+    color: rgba(var(--fe0,0,55,107),1);
+}
+.check_data{
+    margin-left:40px;
+    padding:5px;
+}
+#message{
+    font-size:10px;
+    color:red;
+    text-align:left;
+    margin-left:42px;
+}

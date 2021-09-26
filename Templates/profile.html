@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+    <div id="top-box">
+        <div id="profile_id" style="visibility: hidden; position:absolute;">{{user.id}}</div>
+        <div class='selectDisable' id="profile_image">
+            {% if owner == True %}
+            <div style="position:absolute;">
+                <form id="upload_profile_pic" method="POST" action="/add_avatar" enctype="multipart/form-data">
+                    <input id="image_input" type="file" name="image" accept=".jpg, .jpeg, .png, .mpeg" onchange="submit()">
+                </form>
+            </div>
+            {% endif %}
+            <img src="http://127.0.0.1:5000/static\profile_images\{{user.image}}" width="150px" height="150px" style="border-radius:75px;">
+        </div>
+        <div id="username">{{ user.username }}
+            {% if owner == False %}
+                {% if logged == True %}
+                    {% if followed == True %}
+                        <input type="submit" class="12345" id="unfollow" value="unfollow">
+                        <input type="submit" class="12345" id="follow" value="Follow">
+                    {% else %}
+                        <input type="submit" class="12345" id="unfollow" value="unfollow" style="opacity:0;">
+                        <input type="submit" class="12345" id="follow" value="Follow">
+                    {% endif %}
+                {% else %}
+                <form method="GET" action="/login">
+                    <input type="submit" class="12345" id="unfollow" value="unfollow" style="opacity:0;">
+                    <input type="submit" id="follow" value="Follow">
+                </form>
+                {% endif %}
+            {% endif %}
+            <div style="clear:both;"></div>
+            <div style="font-size:18px;"><div class="stats">{{lang['posts']}}<b> {{user.posts_count}}</b></div> <div class="stats">{{lang['followers']}}<b> {{user.followed_by_count}}</b> </div> <div class="stats">{{lang['followed']}} <b>{{user.followed_count}}</b></div>
+            </div>
+        </div>
+            <div style="clear:both;"></div>
+    </div>
+        <div id="posts" style="width:1200px;">
+        {% for post1 in user.posts %}
+            {% for post in posts %}
+                {% if post1 == post.id %}
+                    <div class="profile_image">
+                        <div class="post_info" id="post_info{{post.id}}"><div class="post_info_content">{{post.likes_counter}}</div></div>
+                        <img class="post" width="370" height="370"  src="http://127.0.0.1:5000\static\edited_images\{{post.str_id}}">
+                        <div style="height: 370px; width: 370px; position: absolute; "></div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+        </div>
+{% endblock %}

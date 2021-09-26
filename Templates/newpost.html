@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="box">
+<form id='newpost_form' method="POST" action="/newpost" enctype="multipart/form-data">
+    <input type="text" name="description" placeholder="Description"><br>
+    <input id="image" type="file" name="image" accept=".jpg, .jpeg, .png, .mpeg" onchange="loadFile(event)">
+    <div style="font-size:12px;" id="button">{{lang['newpost']}}</div>
+    <input name="moved_x" id="moved_x" value="0">
+    <input name="moved_y" id="moved_y" value="0">
+    <div><img id="output" style="text-decoration:none;"/><div id="scale"></div></div>
+</form>
+</div>
+
+
+<input id="x" value="xd">
+<input id="y" value="xd">
+
+
+
+<script src="static/newpost.js"></script>
+
+{% endblock %}

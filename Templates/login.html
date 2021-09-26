@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <title>Instagram</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/login.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="static/main.js"></script>
+</head>
+<body>
+    <div id="content" class="noselect">
+        <div id="box">
+            <div id="div_logo">
+                <div id="logo">
+                    Instagram
+                </div>
+            </div>
+            <form method="POST" action="/login">
+                <input type="text" name="username" placeholder="{{lang['username']}}" class="input">
+                <input type="password" name="password" placeholder="{{lang['password']}}" class="input"><br>
+                <input type="submit" name="description" value="{{lang['login']}}" id="button">
+            </form>
+            <a id="forgot" href="/forgot">{{lang['forgot']}}</a>
+        </div>
+        <div id="box2">
+            {{lang['noacc']}}
+            <a style="color:#0095f6;" href="/signup">{{lang['register']}}!</a>
+        </div>
+        <div id="box2">
+            <a href="language/enlogin"><img style="margin-right:15px;" width=30 height=30 src="{{url_for('static',filename = 'languages/english.png')}}"></a>
+            <a href="language/pllogin"><img width=30 height=30 src="{{url_for('static',filename = 'languages/polish.png')}}"></a>
+        </div>
+
+
+
+    </div>
+
+</body>
+</html>
